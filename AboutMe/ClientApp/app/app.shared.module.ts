@@ -8,6 +8,9 @@ import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
+import { UserComponent } from './components/user/user.component';
+import { JobComponent } from './components/job/job.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
@@ -16,6 +19,9 @@ import { CounterComponent } from './components/counter/counter.component';
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
+        UserComponent,
+        JobComponent,
+        CalendarComponent,
         HomeComponent
     ],
     imports: [
@@ -27,6 +33,9 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'user', component: UserComponent },
+            { path: 'job', component: JobComponent },
+            { path: 'calendar', component: CalendarComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
