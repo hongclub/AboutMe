@@ -1,4 +1,64 @@
 <h1>User Profile</h1>
 <p>This will provide functionality to manage user profile</p>
-<p>To do: edit mode</p>
+<p>To do: edit modes</p>
+
+
+<div *ngIf="user1">
+    <div>
+        <label>
+            Username:
+            {{user1.UserName}}
+        </label>
+    </div>
+    <div>
+        <label>
+            Username:
+            <input [(ngModel)]="user1.Id" placeholder="name" />
+        </label>
+    </div>
+    <!--
+    <div>
+        <label>
+            First Name:
+            <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Last Name:
+            <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Email Address:
+            <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Phone Number:
+            <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+    </div>
+
+    <button (click)="save()">save</button>
+        -->
+</div>
+
+
+<!-- 
+<div *ngIf="hero">
+    <h2>{{ hero.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+    <label>
+        name:
+        <input [(ngModel)]="hero.name" placeholder="name" />
+    </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+</div>
+    -->
 
