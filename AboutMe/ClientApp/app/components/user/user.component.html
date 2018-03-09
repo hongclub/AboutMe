@@ -3,47 +3,45 @@
 <p>To do: edit modes</p>
 
 
-<div *ngIf="user1">
+<div *ngIf="user">
     <div>
         <label>
-            Username:
-            {{user1.UserName}}
+            Id:
+            {{ user.Id }}
         </label>
     </div>
     <div>
         <label>
             Username:
-            <input [(ngModel)]="user1.Id" placeholder="name" />
+            <input [(ngModel)]="user.UserName" placeholder="name" /> 
         </label>
     </div>
-    <!--
     <div>
         <label>
             First Name:
-            <input [(ngModel)]="hero.name" placeholder="name" />
+            <input [(ngModel)]="user.FirstName" placeholder="name" />
         </label>
     </div>
     <div>
         <label>
             Last Name:
-            <input [(ngModel)]="hero.name" placeholder="name" />
+            <input [(ngModel)]="user.LastName" placeholder="name" />
         </label>
     </div>
     <div>
         <label>
             Email Address:
-            <input [(ngModel)]="hero.name" placeholder="name" />
+            <input [(ngModel)]="user.EmailAddress" placeholder="name" />
         </label>
     </div>
     <div>
         <label>
             Phone Number:
-            <input [(ngModel)]="hero.name" placeholder="name" />
+            <input [(ngModel)]="user.PhoneNumber" placeholder="name" />
         </label>
     </div>
 
     <button (click)="save()">save</button>
-        -->
 </div>
 
 
