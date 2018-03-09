@@ -4,15 +4,43 @@
 
 <p *ngIf="!jobs"><em>Loading...</em></p>
 
+<button (click)="incrementCounter()">Add Job</button>
+
 <table class='table' *ngIf="jobs">
     <thead>
         <tr>
             <th>Id</th>
+            <th>Title</th>
+            <th>Descrption</th>
+            <th>Comment</th>
+            <th>Rate</th>
+            <th>Company Rate</th>
+            <th>Categpry</th>
+            <th>Created Date</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let job of jobs">
             <td>{{ job.id }}</td>
+            <td>{{ job.title }}</td>
+            <td>{{ job.descrption }}</td>
+            <td>{{ job.comment }}</td>
+            <td>{{ job.rate }}</td>
+            <td>{{ job.companyRate }}</td>
+            <td>{{ job.category }}</td>
+            <td>{{ job.createdDate }}</td>
+            <td>
+                <a [routerLink]="['/job-edit']">
+                    <span class='glyphicon glyphicon-pencil'></span> 
+                </a>
+            </td>
+            <td>
+                <a [routerLink]="['/fetch-data']">
+                    <span class='glyphicon glyphicon-trash'></span> 
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>

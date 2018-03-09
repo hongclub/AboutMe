@@ -38,12 +38,30 @@ namespace AboutMe.Controllers
                     Rate = "2 star",
                     Comment = "blah blah blah",
                     CreatedDate = "12/13/2018"
-            }
+                }
             );
 
             return result;
         }
 
+
+        [HttpGet("[action]")]
+        public Job JobDetail()
+        {
+            Job _job = new Job()
+            {
+                Id = 0002,
+                Title = "Yahoo - Software Engineer",
+                Description = "Provide software support",
+                Category = "Software",
+                CompanyRate = "1 star",
+                Rate = "2 star",
+                Comment = "blah blah blah",
+                CreatedDate = "12/13/2018"
+            };
+
+            return _job;
+        }
 
     }
 }

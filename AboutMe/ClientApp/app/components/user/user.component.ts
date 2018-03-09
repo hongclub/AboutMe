@@ -39,12 +39,12 @@ export class UserComponent {
 
         // TODO: it will just update the value on the fire
         // this.user = new UserObject();
-        this.user.Id = 345345;
-        this.user.UserName = 'Tommy Lai2';
-        this.user.FirstName = 'Wai-Hong';
-        this.user.LastName = 'Lai';
-        this.user.EmailAddress = 'lai_tommy@hotmail.com';
-        this.user.PhoneNumber = '949-374-3491';
+        this.user.id = 345345;
+        this.user.userName = 'Tommy Lai2';
+        this.user.firstName = 'Wai-Hong';
+        this.user.lastName = 'Lai';
+        this.user.emailAddress = 'lai_tommy@hotmail.com';
+        this.user.phoneNumber = '949-374-3491';
 
         console.log(this.user);
     }
@@ -53,12 +53,12 @@ export class UserComponent {
 
 
 export class UserObject {
-    Id: number; 
-    UserName: string;
-    FirstName: string;
-    LastName: string;
-    EmailAddress: string;
-    PhoneNumber: string;
+    id: number; 
+    userName: string;
+    firstName: string;
+    lastName: string;
+    emailAddress: string;
+    phoneNumber: string;
 }
 
 

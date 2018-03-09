@@ -1,0 +1,59 @@
+<h1>Jobs</h1>
+<p>This will provide functionality to manage jobs</p>
+<p>to do: display, add new, edit</p>
+
+
+
+<div *ngIf="job">
+    <div>
+        <label>
+            Id: {{ user.id }}
+        </label>
+    </div>
+    <div>
+        <label>
+            Username:
+            <input [(ngModel)]="job.title" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            First Name:
+            <input [(ngModel)]="job.description" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Last Name:
+            <input [(ngModel)]="job.comment" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Email Address:
+            <input [(ngModel)]="job.rate" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Phone Number:
+            <input [(ngModel)]="job.companyRate" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Phone Number:
+            <input [(ngModel)]="job.category" placeholder="name" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Phone Number:
+            <input [(ngModel)]="job.createdDate" placeholder="name" />
+        </label>
+    </div>
+
+    <button (click)="save()">save</button>
+</div>
+
+

@@ -2,15 +2,15 @@ import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 
 @Component({
-    selector: 'job',
-    templateUrl: './job.component.html'
+    selector: 'whatever',
+    templateUrl: './job-edit.component.html'
 })
-export class JobComponent {
-    public jobs: Job[];
+export class JobEditComponent {
+    public job: Job;
 
     constructor(http: Http, @Inject('BASE_URL') baseUrl: string) {
-        http.get(baseUrl + 'api/Job/Jobs').subscribe(result => {
-            this.jobs = result.json() as Job[];
+        http.get(baseUrl + 'api/Job/JobDetail').subscribe(result => {
+            this.job = result.json() as Job;
         }, error => console.error(error));
     }
 }
