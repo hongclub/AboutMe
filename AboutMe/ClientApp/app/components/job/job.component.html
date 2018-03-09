@@ -2,3 +2,19 @@
 <p>This will provide functionality to manage jobs</p>
 <p>to do: display, add new, edit</p>
 
+<p *ngIf="!jobs"><em>Loading...</em></p>
+
+<table class='table' *ngIf="jobs">
+    <thead>
+        <tr>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let job of jobs">
+            <td>{{ job.id }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
