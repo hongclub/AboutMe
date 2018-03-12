@@ -4,7 +4,7 @@
 
 <p *ngIf="!jobs"><em>Loading...</em></p>
 
-<button (click)="incrementCounter()">Add Job</button>
+<button (click)="true;" [routerLink]="['/job-edit']">Add Job</button>
 
 <table class='table' *ngIf="jobs">
     <thead>

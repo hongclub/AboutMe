@@ -19,8 +19,9 @@ export class JobEditComponent {
         http.get(baseUrl + 'api/Job/JobDetail/' + id).subscribe(result => {
             this.job = result.json() as Job;
         }, error => console.error(error));
-    }
 
+        
+    }
 
 }
 
