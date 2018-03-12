@@ -43,7 +43,7 @@ namespace AboutMe
 
             app.UseStaticFiles();
 
-            
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -54,6 +54,7 @@ namespace AboutMe
                     name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
             });
+
             
         }
     }

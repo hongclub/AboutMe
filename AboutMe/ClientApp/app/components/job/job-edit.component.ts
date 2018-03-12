@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'; 
 import { Http } from '@angular/http';
 
 @Component({
@@ -7,13 +8,23 @@ import { Http } from '@angular/http';
 })
 export class JobEditComponent {
     public job: Job;
+    public user: string;
 
-    constructor(http: Http, @Inject('BASE_URL') baseUrl: string) {
-        http.get(baseUrl + 'api/Job/JobDetail').subscribe(result => {
+    
+
+    constructor(http: Http, @Inject('BASE_URL') baseUrl: string, private route: ActivatedRoute) {
+        // get id from url
+        const id = this.route.snapshot.paramMap.get('id');
+
+        http.get(baseUrl + 'api/Job/JobDetail/' + id).subscribe(result => {
             this.job = result.json() as Job;
         }, error => console.error(error));
     }
+
+
 }
+
+
 
 interface Job {
     id: Number,

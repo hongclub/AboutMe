@@ -45,21 +45,26 @@ namespace AboutMe.Controllers
         }
 
 
-        [HttpGet("[action]")]
-        public Job JobDetail()
+        [HttpGet("[action]/{Id}")]
+        public Job JobDetail(string Id)
         {
-            Job _job = new Job()
-            {
-                Id = 0002,
-                Title = "Yahoo - Software Engineer",
-                Description = "Provide software support",
-                Category = "Software",
-                CompanyRate = "1 star",
-                Rate = "2 star",
-                Comment = "blah blah blah",
-                CreatedDate = "12/13/2018"
-            };
+            Job _job = new Job();
 
+            if (Id != "null")   // TODO: need to handle null and empty better
+            {
+                _job = new Job()
+                {
+                    Id = 0002,
+                    Title = "Yahoo - Software Engineer",
+                    Description = "Provide software support",
+                    Category = "Software",
+                    CompanyRate = "1 star",
+                    Rate = "2 star",
+                    Comment = "blah blah blah",
+                    CreatedDate = "12/13/2018"
+                };
+            }
+           
             return _job;
         }
 
