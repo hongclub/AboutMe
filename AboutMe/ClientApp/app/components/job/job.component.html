@@ -32,7 +32,7 @@
             <td>{{ job.category }}</td>
             <td>{{ job.createdDate }}</td>
             <td>
-                <a [routerLink]="['/job-edit']">
+                <a [routerLink]="['/job-edit', job.id]">
                     <span class='glyphicon glyphicon-pencil'></span> 
                 </a>
             </td>

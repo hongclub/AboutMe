@@ -38,6 +38,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'user', component: UserComponent },
             { path: 'job', component: JobComponent },
             { path: 'job-edit', component: JobEditComponent },
+            { path: 'job-edit/:id?', component: JobEditComponent },
             { path: 'calendar', component: CalendarComponent },
             { path: '**', redirectTo: 'home' }
         ])
