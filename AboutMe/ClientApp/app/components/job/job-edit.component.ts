@@ -12,15 +12,18 @@ export class JobEditComponent {
 
     
 
-    constructor(http: Http, @Inject('BASE_URL') baseUrl: string, private route: ActivatedRoute) {
+    constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute) {
         // get id from url
         const id = this.route.snapshot.paramMap.get('id');
 
-        http.get(baseUrl + 'api/Job/JobDetail/' + id).subscribe(result => {
+        this.http.get(this.baseUrl + 'api/Job/JobDetail/' + id).subscribe(result => {
             this.job = result.json() as Job;
         }, error => console.error(error));
+    }
 
-        
+    
+    save(): void {
+        this.http.post(this.baseUrl + 'api/Job/UpdateJob', this.job).subscribe(res => console.log(res.json()));;        
     }
 
 }

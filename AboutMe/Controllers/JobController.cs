@@ -68,5 +68,30 @@ namespace AboutMe.Controllers
             return _job;
         }
 
+        [HttpPost("[action]")]
+        public Job UpdateJob([FromBody]Job job)
+        {
+            Job _job = new Job();
+
+            /*
+            if (Id != "null")   // TODO: need to handle null and empty better
+            {
+                _job = new Job()
+                {
+                    Id = 0002,
+                    Title = "Yahoo - Software Engineer",
+                    Description = "Provide software support",
+                    Category = "Software",
+                    CompanyRate = "1 star",
+                    Rate = "2 star",
+                    Comment = "blah blah blah",
+                    CreatedDate = "12/13/2018"
+                };
+            }
+            */
+
+            return _job;
+        }
+
     }
 }
