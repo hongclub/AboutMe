@@ -24,6 +24,7 @@ namespace AboutMe.Controllers
         {
             User _user = new User()
             {
+                // TODO: get existing user
                 Id = 1234,
                 UserName = "hongclub",
                 FirstName = "Tommy",

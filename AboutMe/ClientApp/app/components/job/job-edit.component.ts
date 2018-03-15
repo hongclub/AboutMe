@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { Http } from '@angular/http';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'whatever',
@@ -12,7 +13,7 @@ export class JobEditComponent {
 
     
 
-    constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute) {
+    constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute, private location: Location) {
         // get id from url
         const id = this.route.snapshot.paramMap.get('id');
 
@@ -21,9 +22,13 @@ export class JobEditComponent {
         }, error => console.error(error));
     }
 
-    
+
+    goBack(): void {
+        this.location.back();
+    }
+
     save(): void {
-        this.http.post(this.baseUrl + 'api/Job/UpdateJob', this.job).subscribe(res => console.log(res.json()));;        
+        this.http.post(this.baseUrl + 'api/Job/UpdateJob', this.job).subscribe(() => this.goBack());        
     }
 
 }

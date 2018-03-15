@@ -52,6 +52,7 @@ namespace AboutMe.Controllers
 
             if (Id != "null")   // TODO: need to handle null and empty better
             {
+                // TODO: get existing job
                 _job = new Job()
                 {
                     Id = 0002,
@@ -73,22 +74,14 @@ namespace AboutMe.Controllers
         {
             Job _job = new Job();
 
-            /*
-            if (Id != "null")   // TODO: need to handle null and empty better
+            if (job.Id == 0)
             {
-                _job = new Job()
-                {
-                    Id = 0002,
-                    Title = "Yahoo - Software Engineer",
-                    Description = "Provide software support",
-                    Category = "Software",
-                    CompanyRate = "1 star",
-                    Rate = "2 star",
-                    Comment = "blah blah blah",
-                    CreatedDate = "12/13/2018"
-                };
+                // TODO: insert new job
             }
-            */
+            else
+            {
+                // TODO; update exiting job
+            }
 
             return _job;
         }
