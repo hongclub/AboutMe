@@ -1,46 +1,47 @@
-<h1>User Profile</h1>
-<p>This will provide functionality to manage user profile</p>
-<p>To do: edit modes</p>
+<h2>User Profile</h2>
+<hr>
 
 
 <div *ngIf="user">
-    <div>
+    <div class="form-group">
         <label>
             Id: {{ user.id }}
         </label>
     </div>
-    <div>
+    <div class="form-group">
         <label>
-            Username:
-            <input [(ngModel)]="user.userName" placeholder="name" /> 
+            <span class="text-muted">Username</span>
+            <input class="form-control" [(ngModel)]="user.userName" placeholder="name" />
         </label>
     </div>
-    <div>
+    <div class="form-group">
         <label>
-            First Name:
-            <input [(ngModel)]="user.firstName" placeholder="name" />
+            <span class="text-muted">First Name</span>
+            <input class="form-control" [(ngModel)]="user.firstName" placeholder="name" />
         </label>
     </div>
-    <div>
+    <div class="form-group">
         <label>
-            Last Name:
-            <input [(ngModel)]="user.lastName" placeholder="name" />
+            <span class="text-muted">Last Name</span>
+            <input class="form-control" [(ngModel)]="user.lastName" placeholder="name" />
         </label>
     </div>
-    <div>
+    <div class="form-group">
         <label>
-            Email Address:
-            <input [(ngModel)]="user.emailAddress" placeholder="name" />
+            <span class="text-muted">Email Address</span>
+            <input class="form-control" [(ngModel)]="user.emailAddress" placeholder="name" />
         </label>
     </div>
-    <div>
+    <div class="form-group">
         <label>
-            Phone Number:
-            <input [(ngModel)]="user.phoneNumber" placeholder="name" />
+            <span class="text-muted">Phone Number</span>
+            <input class="form-control" [(ngModel)]="user.phoneNumber" placeholder="name" />
         </label>
     </div>
 
-    <button (click)="save()">save</button>
+    <div class="form-group">
+        <button class="btn btn-primary" (click)="save()">save</button>
+    </div>
 </div>
 
 
