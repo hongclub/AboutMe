@@ -1,10 +1,6 @@
 <h1>Jobs</h1>
-<p>This will provide functionality to manage jobs</p>
-<p>to do: display, add new, edit</p>
 
-<p *ngIf="!jobs"><em>Loading...</em></p>
-
-<button (click)="true;" [routerLink]="['/job-edit']">Add Job</button>
+<button (click)="true;" [routerLink]="['/job-edit']" class="btn btn-primary">Add Job</button>
 
 <table class='table' *ngIf="jobs">
     <thead>

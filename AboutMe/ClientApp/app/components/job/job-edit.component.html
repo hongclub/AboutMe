@@ -1,61 +1,63 @@
-<h1>Jobs</h1>
-<p>This will provide functionality to manage jobs</p>
-<p>to do: display, add new, edit</p>
+<h1>Job Detail</h1>
+
+    <div *ngIf="job">
+
+        <div>
+            <label>
+                Id: {{ job.id }}
+            </label>
+        </div>
+
+        <div class="form-inline">
+            <label>
+                Title:
+                <input class="form-control" [(ngModel)]="job.title" placeholder="name" />
+            </label>
+        </div>
+
+        <div class="form-inline">
+            <label>
+                Overall Rate:
+                <input class="form-control" [(ngModel)]="job.rate" placeholder="name" />
+            </label>
+        </div>
+        <div class="form-inline">
+            <label>
+                Company Rate:
+                <input class="form-control" [(ngModel)]="job.companyRate" placeholder="name" />
+            </label>
+        </div>
+        <div class="form-inline">
+            <label>
+                Category:
+                <input class="form-control" [(ngModel)]="job.category" placeholder="name" />
+            </label>
+        </div>
+        <div class="form-inline">
+            <label>
+                Created Date:
+                <input class="form-control" [(ngModel)]="job.createdDate" placeholder="name" />
+            </label>
+        </div>
+        <div class="form-inline">
+            <label>
+                Comment:
+                <textarea class="form-control" rows="3" cols="50" [(ngModel)]="job.comment" placeholder="name">
+            </textarea>
+            </label>
+        </div>
+        <div class="form-inline">
+            <label>
+                Description:
+                <textarea class="form-control" rows="3" cols="50" [(ngModel)]="job.description" placeholder="name">
+            </textarea>
+            </label>
+        </div>
+
+        <button (click)="save()" class="btn btn-primary" >save</button>
+        <button (click)="goBack()" class="btn btn-secondary">cancel</button>
+    </div>
 
 
-
-<div *ngIf="job">
-    Hello
-    <div>
-        <label>
-            <!--  Id: {{ user.id }} -->
-        </label>
-    </div>
-    <div>
-        <label>
-            Title:
-            <input [(ngModel)]="job.title" placeholder="name" />
-        </label>
-    </div>
-    <div>
-        <label>
-            First Name:
-            <input [(ngModel)]="job.description" placeholder="name" />
-        </label>
-    </div>
-    <div>
-        <label>
-            Last Name:
-            <input [(ngModel)]="job.comment" placeholder="name" />
-        </label>
-    </div>
-    <div>
-        <label>
-            Email Address:
-            <input [(ngModel)]="job.rate" placeholder="name" />
-        </label>
-    </div>
-    <div>
-        <label>
-            Phone Number:
-            <input [(ngModel)]="job.companyRate" placeholder="name" />
-        </label>
-    </div>
-    <div>
-        <label>
-            Phone Number:
-            <input [(ngModel)]="job.category" placeholder="name" />
-        </label>
-    </div>
-    <div>
-        <label>
-            Phone Number:
-            <input [(ngModel)]="job.createdDate" placeholder="name" />
-        </label>
-    </div>
-
-    <button (click)="save()">save</button>
-    <button (click)="goBack()">cancel</button>
-</div>
 
 

@@ -62,7 +62,7 @@ export class JobEditComponent {
 export class  Job {
     id: Number;
     title: string;
-    descrption: string;
+    description: string;
     comment: string;
     rate: string;
     companyRate: string;
