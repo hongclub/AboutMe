@@ -54,7 +54,11 @@ namespace AboutMe.Models.DataManager
             if (appointment != null)
             {
                 appointment.Title = item.Title;
-
+                appointment.Description = item.Description;
+                appointment.ObjectId = item.ObjectId;
+                appointment.ObjectType = item.ObjectType;
+                appointment.Date = item.Date;
+                appointment.CreatedDate = item.CreatedDate;
 
                 appointmentID = ctx.SaveChanges();
             }

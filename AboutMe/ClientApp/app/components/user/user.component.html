@@ -1,46 +1,48 @@
 <h2>User Profile</h2>
 <hr>
 
-
-<div *ngIf="user">
-    <div class="form-group">
-        <label>
-            Id: {{ user.id }}
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Username</span>
-            <input class="form-control" [(ngModel)]="user.userName" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">First Name</span>
-            <input class="form-control" [(ngModel)]="user.firstName" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Last Name</span>
-            <input class="form-control" [(ngModel)]="user.lastName" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Email Address</span>
-            <input class="form-control" [(ngModel)]="user.emailAddress" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Phone Number</span>
-            <input class="form-control" [(ngModel)]="user.phoneNumber" placeholder="name" />
-        </label>
-    </div>
-
-    <div class="form-group">
-        <button class="btn btn-primary" (click)="save()">save</button>
+<div class="container-fluid">
+    <div class="row">
+        <div *ngIf="user" class="col-sm-5" style="background-color:#f5f5f5; padding: 30px; border-radius: 10px;">
+            <div class="form-group">
+                <label>
+                    Id: {{ user.id }}
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    <span class="text-muted">Username</span>
+                </label>
+                <input class="form-control" [(ngModel)]="user.userName" placeholder="name" />
+            </div>
+            <div class="form-group">
+                <label>
+                    <span class="text-muted">First Name</span>
+                </label>
+                <input class="form-control" [(ngModel)]="user.firstName" placeholder="name" />
+            </div>
+            <div class="form-group">
+                <label>
+                    <span class="text-muted">Last Name</span>
+                </label>
+                <input class="form-control" [(ngModel)]="user.lastName" placeholder="name" />
+            </div>
+            <div class="form-group">
+                <label>
+                    <span class="text-muted">Email Address</span>
+                </label>
+                <input class="form-control" [(ngModel)]="user.emailAddress" placeholder="name" />
+            </div>
+            <div class="form-group">
+                <label>
+                    <span class="text-muted">Phone Number</span>
+                </label>
+                <input class="form-control" [(ngModel)]="user.phoneNumber" placeholder="name" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="save()">save</button>
+            </div>
+        </div>
     </div>
 </div>
 

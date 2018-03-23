@@ -21,7 +21,5 @@ namespace AboutMe.Models
 
         public string CreatedDate { get; set; }
 
-
-
     }
 }

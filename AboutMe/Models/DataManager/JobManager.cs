@@ -54,7 +54,9 @@ namespace AboutMe.Models.DataManager
             if (job != null)
             {
                 job.Title = item.Title;
-
+                job.Comment = item.Comment;
+                job.Rate = item.Rate;
+                job.Category = item.Category;
 
                 jobID = ctx.SaveChanges();
             }

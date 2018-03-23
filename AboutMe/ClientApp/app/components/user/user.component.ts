@@ -8,7 +8,7 @@ import { Http } from '@angular/http';
 export class UserComponent {
     public user: UserObject;
 
-    constructor(http: Http, @Inject('BASE_URL') private baseUrl: string) {
+    constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {
 
         ////this.getUser();
         
@@ -25,7 +25,7 @@ export class UserComponent {
         const id = 1;
 
 
-        http.get(this.baseUrl + 'api/User/' + id).subscribe(result => {
+        this.http.get(this.baseUrl + 'api/User/' + id).subscribe(result => {
             this.user = result.json() as UserObject;
         }, error => console.error(error));
         
@@ -46,16 +46,7 @@ export class UserComponent {
 
     save(): void {
 
-        // TODO: it will just update the value on the fire
-        // this.user = new UserObject();
-        this.user.id = 345345;
-        this.user.userName = 'Tommy Lai2';
-        this.user.firstName = 'Wai-Hong';
-        this.user.lastName = 'Lai';
-        this.user.emailAddress = 'lai_tommy@hotmail.com';
-        this.user.phoneNumber = '949-374-3491';
-
-        console.log(this.user);
+        this.http.put(this.baseUrl + 'api/User', this.user).subscribe(); 
     }
 
 }

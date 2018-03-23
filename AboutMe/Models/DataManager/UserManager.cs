@@ -45,8 +45,11 @@ namespace AboutMe.Models.DataManager
 
             if (user != null)
             {
+                user.UserName = item.UserName;
+                user.FirstName = item.FirstName; 
+                user.LastName = item.LastName;
+                user.EmailAddress = item.EmailAddress; 
                 user.PhoneNumber = item.PhoneNumber;
-
 
                 userID = ctx.SaveChanges();
             }
