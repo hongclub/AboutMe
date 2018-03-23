@@ -29,6 +29,7 @@ namespace AboutMe
             services.AddDbContext<ApplicationContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:AboutMeDB"]));
             services.AddScoped(typeof(IDataRepository<Job, long>), typeof(JobManager));
             services.AddScoped(typeof(IDataRepository<User, long>), typeof(UserManager));
+            services.AddScoped(typeof(IDataRepository<Appointment, long>), typeof(AppointmentManager));
             services.AddMvc();
         }
 

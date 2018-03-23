@@ -11,6 +11,8 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { UserComponent } from './components/user/user.component';
 import { JobComponent } from './components/job/job.component';
 import { JobEditComponent } from './components/job/job-edit.component';
+import { AppointmentComponent } from './components/appointment/appointment.component';
+import { AppointmentEditComponent } from './components/appointment/appointment-edit.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { CounterComponent } from './components/counter/counter.component';
 
@@ -23,6 +25,8 @@ import { CounterComponent } from './components/counter/counter.component';
         UserComponent,
         JobComponent,
         JobEditComponent,
+        AppointmentComponent,
+        AppointmentEditComponent,
         CalendarComponent,
         HomeComponent
     ],
@@ -39,6 +43,9 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'job', component: JobComponent },
             { path: 'job-edit', component: JobEditComponent },
             { path: 'job-edit/:id', component: JobEditComponent },
+            { path: 'appointment', component: AppointmentComponent },
+            { path: 'appointment-edit', component: AppointmentEditComponent },
+            { path: 'appointment-edit/:id', component: AppointmentEditComponent },
             { path: 'calendar', component: CalendarComponent },
             { path: '**', redirectTo: 'home' }
         ])

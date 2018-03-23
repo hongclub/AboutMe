@@ -20,6 +20,28 @@ namespace AboutMe.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("AboutMe.Models.Appointment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CreatedDate");
+
+                    b.Property<string>("Date");
+
+                    b.Property<string>("Description");
+
+                    b.Property<int>("ObjectId");
+
+                    b.Property<string>("ObjectType");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Appointments");
+                });
+
             modelBuilder.Entity("AboutMe.Models.Job", b =>
                 {
                     b.Property<int>("Id")

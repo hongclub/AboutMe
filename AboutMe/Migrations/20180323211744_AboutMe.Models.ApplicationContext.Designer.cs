@@ -11,7 +11,7 @@ using System;
 namespace AboutMe.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20180323165234_AboutMe.Models.ApplicationContext")]
+    [Migration("20180323211744_AboutMe.Models.ApplicationContext")]
     partial class AboutMeModelsApplicationContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,28 @@ namespace AboutMe.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("AboutMe.Models.Appointment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CreatedDate");
+
+                    b.Property<string>("Date");
+
+                    b.Property<string>("Description");
+
+                    b.Property<int>("ObjectId");
+
+                    b.Property<string>("ObjectType");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Appointments");
+                });
 
             modelBuilder.Entity("AboutMe.Models.Job", b =>
                 {

@@ -20,3 +20,6 @@ questions during development
 ? git revert
 ? need to implement all interface method
 ? EF migration with existing table
+? Created Date object type
+? all field needed to be update
+? delete feature
