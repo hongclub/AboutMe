@@ -1,0 +1,22 @@
+﻿
+questions during development
+----------------------------
+? selector
+? not edit with separate code
+~ ? go back and save button code (me: need to understand more)
+~ ? passing data to the api (me: need to understand more)
+? where to stored images
+? how to pull data actually
+? the class just attached to each code too much (interface and export classes)
+? routing
+? where is the best place to stored all model classes (like hero, job, user)
+? how can you not create entity everywhere, so ignoring
+? not sure how to upgrade from 4.2.5 to 4.3 
+? not sure how to check version
+? not sure how to use HttpClient from common/http
+? not sure  how to http.post and voide the CORS
+? the EF tutorial i follow
+? basic Angular tutorial
+? git revert
+? need to implement all interface method
+? EF migration with existing table

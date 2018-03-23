@@ -16,50 +16,50 @@ namespace AboutMe.Models.DataManager
 
         public Job Get(long id)
         {
-            var student = ctx.Jobs.FirstOrDefault(b => b.Id == id);
-            return student;
+            var job = ctx.Jobs.FirstOrDefault(b => b.Id == id);
+            return job;
         }
 
         public IEnumerable<Job> GetAll()
         {
-            var students = ctx.Jobs.ToList();
-            return students;
+            var jobs = ctx.Jobs.ToList();
+            return jobs;
         }
 
 
-        public long Add(Job stundent)
+        public long Add(Job job)
         {
-            ctx.Jobs.Add(stundent);
-            long studentID = ctx.SaveChanges();
-            return studentID;
+            ctx.Jobs.Add(job);
+            long jobID = ctx.SaveChanges();
+            return jobID;
         }
 
         public long Delete(long id)
         {
-            int studentID = 0;
-            var student = ctx.Jobs.FirstOrDefault(b => b.Id == id);
-            if (student != null)
+            int jobID = 0;
+            var job = ctx.Jobs.FirstOrDefault(b => b.Id == id);
+            if (job != null)
             {
-                ctx.Jobs.Remove(student);
-                studentID = ctx.SaveChanges();
+                ctx.Jobs.Remove(job);
+                jobID = ctx.SaveChanges();
             }
-            return studentID;
+            return jobID;
         }
 
         public long Update(long id, Job item)
         {
-            long studentID = 0;
-            var student = ctx.Jobs.Find((int)id);
+            long jobID = 0;
+            var job = ctx.Jobs.Find((int)id);
 
-            if (student != null)
+            if (job != null)
             {
-                student.Title = item.Title;
+                job.Title = item.Title;
 
 
-                studentID = ctx.SaveChanges();
+                jobID = ctx.SaveChanges();
             }
 
-            return studentID;
+            return jobID;
         }
 
     }

@@ -14,8 +14,13 @@ namespace AboutMe.Models
         }
 
         public DbSet<Job> Jobs { get; set; }
+
+        public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
         }
+
+        
+
     }
 }

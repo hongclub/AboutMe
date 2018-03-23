@@ -1,5 +1,6 @@
-<h2>Job Detail</h2>
+<!-- <h2>Job Detail</h2>
 <hr>
+    -->
 
 <div *ngIf="job">
     <!--
@@ -10,56 +11,56 @@
     </div>
     -->
 
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Title</span>
-            <input class="form-control" [(ngModel)]="job.title" placeholder="name" />
-        </label>
-    </div>
+<div class="form-group">
+    <label>
+        <span class="text-muted">Title</span>
+        <input class="form-control" [(ngModel)]="job.title" placeholder="name" />
+    </label>
+</div>
 
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Overall Rate</span>
-            <input class="form-control" [(ngModel)]="job.rate" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Company Rate</span>
-            <input class="form-control" [(ngModel)]="job.companyRate" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Category</span>
-            <input class="form-control" [(ngModel)]="job.category" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Created Date</span>
-            <input class="form-control" [(ngModel)]="job.createdDate" placeholder="name" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Comment</span>
-            <textarea class="form-control" rows="3" cols="50" [(ngModel)]="job.comment" placeholder="name">
+<div class="form-group">
+    <label>
+        <span class="text-muted">Overall Rate</span>
+        <input class="form-control" [(ngModel)]="job.rate" placeholder="name" />
+    </label>
+</div>
+<div class="form-group">
+    <label>
+        <span class="text-muted">Company Rate</span>
+        <input class="form-control" [(ngModel)]="job.companyRate" placeholder="name" />
+    </label>
+</div>
+<div class="form-group">
+    <label>
+        <span class="text-muted">Category</span>
+        <input class="form-control" [(ngModel)]="job.category" placeholder="name" />
+    </label>
+</div>
+<div class="form-group">
+    <label>
+        <span class="text-muted">Created Date</span>
+        <input class="form-control" [(ngModel)]="job.createdDate" placeholder="name" />
+    </label>
+</div>
+<div class="form-group">
+    <label>
+        <span class="text-muted">Comment</span>
+        <textarea class="form-control" rows="3" cols="50" [(ngModel)]="job.comment" placeholder="name">
             </textarea>
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            <span class="text-muted">Description</span>
-            <textarea class="form-control" rows="3" cols="50" [(ngModel)]="job.description" placeholder="name">
+    </label>
+</div>
+<div class="form-group">
+    <label>
+        <span class="text-muted">Description</span>
+        <textarea class="form-control" rows="3" cols="50" [(ngModel)]="job.description" placeholder="name">
             </textarea>
-        </label>
-    </div>
+    </label>
+</div>
 
-    <div class="form-group">
-        <button class="btn btn-primary" (click)="save()" >save</button>
-        <button class="btn btn-secondary" (click)="goBack()">cancel</button>
-    </div>
+<div class="form-group">
+    <button class="btn btn-primary" (click)="save()">save</button>
+    <button class="btn btn-secondary" (click)="goBack()">cancel</button>
+</div>
 </div>
 
 

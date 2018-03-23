@@ -8,18 +8,27 @@ import { Http } from '@angular/http';
 export class UserComponent {
     public user: UserObject;
 
-    constructor(http: Http, @Inject('BASE_URL') baseUrl: string) {
+    constructor(http: Http, @Inject('BASE_URL') private baseUrl: string) {
 
-        //this.getUser();
+        ////this.getUser();
         
-        // TODO: somehow this binding failed ... 
-        http.get(baseUrl + 'api/User/UserDetail').subscribe(result => {
-            this.user = result.json() as UserObject;
+        //// TODO: somehow this binding failed ... 
+        //http.get(baseUrl + 'api/User/UserDetail').subscribe(result => {
+        //    this.user = result.json() as UserObject; 
             
-        }, error => console.error(error));
+        //}, error => console.error(error));
        
-        console.error(this.user);
+        //console.error(this.user);
 
+
+        // get id from url
+        const id = 1;
+
+
+        http.get(this.baseUrl + 'api/User/' + id).subscribe(result => {
+            this.user = result.json() as UserObject;
+        }, error => console.error(error));
+        
     }
 
     /*

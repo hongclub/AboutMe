@@ -34,16 +34,16 @@ namespace AboutMe.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]Job student)
+        public void Post([FromBody]Job job)
         {
-            _iRepo.Add(student);
+            _iRepo.Add(job);
         }
 
-        // POST api/values
+        // PUT api/values
         [HttpPut]
-        public void Put([FromBody]Job student)
+        public void Put([FromBody]Job job)
         {
-            _iRepo.Update(student.Id, student);
+            _iRepo.Update(job.Id, job);
         }
 
         // DELETE api/values/5
