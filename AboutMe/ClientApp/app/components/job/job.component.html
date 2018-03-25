@@ -13,7 +13,7 @@
             <th>Comment</th>
             <th>Rate</th>
             <th>Company Rate</th>
-            <th>Categpry</th>
+            <th>Category</th>
             <th>Created Date</th>
             <th></th>
             <th></th>
@@ -23,7 +23,7 @@
         <tr *ngFor="let job of jobs">
             <td>{{ job.id }}</td>
             <td>{{ job.title }}</td>
-            <td>{{ job.descrption }}</td>
+            <td>{{ job.description }}</td>
             <td>{{ job.comment }}</td>
             <td>{{ job.rate }}</td>
             <td>{{ job.companyRate }}</td>
@@ -35,7 +35,7 @@
                 </a>
             </td>
             <td>
-                <a [routerLink]="['/fetch-data']">
+                <a (click)="delete(job.id)">
                     <span class='glyphicon glyphicon-trash'></span> 
                 </a>
             </td>

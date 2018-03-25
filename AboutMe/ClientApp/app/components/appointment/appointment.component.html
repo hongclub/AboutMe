@@ -22,7 +22,7 @@
         <tr *ngFor="let appointment of appointments">
             <td>{{ appointment.id }}</td>
             <td>{{ appointment.title }}</td>
-            <td>{{ appointment.descrption }}</td>
+            <td>{{ appointment.description }}</td>
             <td>{{ appointment.objectId }}</td>
             <td>{{ appointment.objectType }}</td>
             <td>{{ appointment.createdDate }}</td>
@@ -33,8 +33,8 @@
                 </a>
             </td>
             <td>
-                <a [routerLink]="['/fetch-data']">
-                    <span class='glyphicon glyphicon-trash'></span> 
+                <a (click)="delete(appointment.id)">
+                    <span class='glyphicon glyphicon-trash'></span>
                 </a>
             </td>
         </tr>

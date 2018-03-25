@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'job',
@@ -8,10 +9,19 @@ import { Http } from '@angular/http';
 export class JobComponent {
     public jobs: Job[];
 
-    constructor(http: Http, @Inject('BASE_URL') baseUrl: string) {
+    constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private location: Location) {
         http.get(baseUrl + 'api/Job').subscribe(result => {
             this.jobs = result.json() as Job[];
         }, error => console.error(error));
+    }
+
+
+    delete(id: string): void {
+        this.http.delete(this.baseUrl + 'api/Job/' + id).subscribe(() => this.reload()); 
+    }
+
+    reload(): void {
+        window.location.reload(true);       // TODO: need to use Angular instead 
     }
 }
 

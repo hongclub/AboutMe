@@ -16,10 +16,24 @@ questions during development
 ? not sure how to use HttpClient from common/http
 ? not sure  how to http.post and voide the CORS
 ? the EF tutorial i follow
-? basic Angular tutorial
+
 ? git revert
 ? need to implement all interface method
 ? EF migration with existing table
+
+? basic Angular tutorial
 ? Created Date object type
 ? all field needed to be update
 ? delete feature
+
+
+good feature
+------------
+- upload pics and more images
+- calendar
+- events
+- maybe edit on the same page instead of jumping around
+- separate webapi
+- gui
+- figure out what is TOD and learn
+
