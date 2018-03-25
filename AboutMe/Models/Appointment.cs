@@ -17,9 +17,11 @@ namespace AboutMe.Models
 
         public string ObjectType { get; set; }
 
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
-        public string CreatedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
+
+        public DateTime CreatedDate { get; set; }
 
     }
 }

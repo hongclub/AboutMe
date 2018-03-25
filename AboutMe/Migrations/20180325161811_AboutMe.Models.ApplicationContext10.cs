@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace AboutMe.Migrations
 {
-    public partial class AboutMeModelsApplicationContext : Migration
+    public partial class AboutMeModelsApplicationContext10 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,9 +15,10 @@ namespace AboutMe.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CreatedDate = table.Column<string>(nullable: true),
-                    Date = table.Column<string>(nullable: true),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: false),
                     Description = table.Column<string>(nullable: true),
+                    ModifiedDate = table.Column<DateTime>(nullable: false),
                     ObjectId = table.Column<int>(nullable: false),
                     ObjectType = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true)
@@ -35,10 +36,11 @@ namespace AboutMe.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Category = table.Column<string>(nullable: true),
                     Comment = table.Column<string>(nullable: true),
-                    CompanyRate = table.Column<string>(nullable: true),
-                    CreatedDate = table.Column<string>(nullable: true),
+                    CompanyRating = table.Column<int>(nullable: false),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
                     Description = table.Column<string>(nullable: true),
-                    Rate = table.Column<string>(nullable: true),
+                    ModifiedDate = table.Column<DateTime>(nullable: false),
+                    Rating = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -52,9 +54,11 @@ namespace AboutMe.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
                     EmailAddress = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
+                    ModifiedDate = table.Column<DateTime>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: true),
                     UserName = table.Column<string>(nullable: true)
                 },

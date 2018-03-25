@@ -11,9 +11,10 @@
             <th>Title</th>
             <th>Descrption</th>
             <th>Comment</th>
-            <th>Rate</th>
+            <th>Rating</th>
             <th>Company Rate</th>
             <th>Category</th>
+            <th>Modified Date</th>
             <th>Created Date</th>
             <th></th>
             <th></th>
@@ -25,9 +26,10 @@
             <td>{{ job.title }}</td>
             <td>{{ job.description }}</td>
             <td>{{ job.comment }}</td>
-            <td>{{ job.rate }}</td>
-            <td>{{ job.companyRate }}</td>
+            <td>{{ job.rating }}</td>
+            <td>{{ job.companyRating }}</td>
             <td>{{ job.category }}</td>
+            <td>{{ job.modifiedDate }}</td>
             <td>{{ job.createdDate }}</td>
             <td>
                 <a [routerLink]="['/job-edit', job.id]">

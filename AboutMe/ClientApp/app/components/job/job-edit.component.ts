@@ -44,13 +44,16 @@ export class JobEditComponent {
     }
 
     save(): void {
+        let currentDate = new Date();
 
         if (this.job.id == null)
         {
+            this.job.createdDate = currentDate;
             this.http.post(this.baseUrl + 'api/Job', this.job).subscribe(() => this.goBack()); 
         }
         else
         {
+            this.job.modifiedDate = currentDate;
             this.http.put(this.baseUrl + 'api/Job', this.job).subscribe(() => this.goBack());       
         }
     }
@@ -64,10 +67,12 @@ export class  Job {
     title: string;
     description: string;
     comment: string;
-    rate: string;
-    companyRate: string;
+    rating: string;
+    companyRating: string;
     category: string;
-    createdDate: string
+    modifiedDate: Date
+    createdDate: Date;
+   
 
     //constructor(id: number,
     //    title: string,

@@ -25,11 +25,13 @@ namespace AboutMe.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CreatedDate");
+                    b.Property<DateTime>("CreatedDate");
 
-                    b.Property<string>("Date");
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("Description");
+
+                    b.Property<DateTime>("ModifiedDate");
 
                     b.Property<int>("ObjectId");
 
@@ -51,13 +53,15 @@ namespace AboutMe.Migrations
 
                     b.Property<string>("Comment");
 
-                    b.Property<string>("CompanyRate");
+                    b.Property<int>("CompanyRating");
 
-                    b.Property<string>("CreatedDate");
+                    b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Rate");
+                    b.Property<DateTime>("ModifiedDate");
+
+                    b.Property<int>("Rating");
 
                     b.Property<string>("Title");
 
@@ -71,11 +75,15 @@ namespace AboutMe.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("CreatedDate");
+
                     b.Property<string>("EmailAddress");
 
                     b.Property<string>("FirstName");
 
                     b.Property<string>("LastName");
+
+                    b.Property<DateTime>("ModifiedDate");
 
                     b.Property<string>("PhoneNumber");
 

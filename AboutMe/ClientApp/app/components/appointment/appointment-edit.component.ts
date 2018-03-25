@@ -45,12 +45,15 @@ export class AppointmentEditComponent {
 
     save(): void {
 
+        let currentDate = new Date();
         if (this.appointment.id == null)
         {
+            this.appointment.createdDate = currentDate;
             this.http.post(this.baseUrl + 'api/Appointment', this.appointment).subscribe(() => this.goBack()); 
         }
         else
         {
+            this.appointment.modifiedDate = currentDate;
             this.http.put(this.baseUrl + 'api/Appointment', this.appointment).subscribe(() => this.goBack());       
         }
     }
@@ -66,7 +69,8 @@ export class Appointment {
     objectId: Number;
     objectType: string;
     date: string;
-    createdDate: string
+    modifiedDate: Date;
+    createdDate: Date
 }
 
 

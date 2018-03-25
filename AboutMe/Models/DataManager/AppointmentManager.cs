@@ -58,7 +58,7 @@ namespace AboutMe.Models.DataManager
                 appointment.ObjectId = item.ObjectId;
                 appointment.ObjectType = item.ObjectType;
                 appointment.Date = item.Date;
-                appointment.CreatedDate = item.CreatedDate;
+                appointment.ModifiedDate = item.ModifiedDate;
 
                 appointmentID = ctx.SaveChanges();
             }

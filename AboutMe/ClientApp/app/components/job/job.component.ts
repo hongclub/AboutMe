@@ -30,10 +30,11 @@ interface Job {
     title: string,
     descrption: string,
     comment: string,
-    rate: string,
-    companyRate: string,
+    rating: string,
+    companyRating: string,
     category: string,
-    createdDate: string
+    modifiedDate: Date
+    createdDate: Date
 }
 
 

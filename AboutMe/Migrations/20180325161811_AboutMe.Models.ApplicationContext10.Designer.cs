@@ -11,8 +11,8 @@ using System;
 namespace AboutMe.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20180323211744_AboutMe.Models.ApplicationContext")]
-    partial class AboutMeModelsApplicationContext
+    [Migration("20180325161811_AboutMe.Models.ApplicationContext10")]
+    partial class AboutMeModelsApplicationContext10
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,13 @@ namespace AboutMe.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CreatedDate");
+                    b.Property<DateTime>("CreatedDate");
 
-                    b.Property<string>("Date");
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("Description");
+
+                    b.Property<DateTime>("ModifiedDate");
 
                     b.Property<int>("ObjectId");
 
@@ -52,13 +54,15 @@ namespace AboutMe.Migrations
 
                     b.Property<string>("Comment");
 
-                    b.Property<string>("CompanyRate");
+                    b.Property<int>("CompanyRating");
 
-                    b.Property<string>("CreatedDate");
+                    b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Rate");
+                    b.Property<DateTime>("ModifiedDate");
+
+                    b.Property<int>("Rating");
 
                     b.Property<string>("Title");
 
@@ -72,11 +76,15 @@ namespace AboutMe.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("CreatedDate");
+
                     b.Property<string>("EmailAddress");
 
                     b.Property<string>("FirstName");
 
                     b.Property<string>("LastName");
+
+                    b.Property<DateTime>("ModifiedDate");
 
                     b.Property<string>("PhoneNumber");
 

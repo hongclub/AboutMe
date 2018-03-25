@@ -30,7 +30,8 @@ interface Appointment {
     objectId: Number,
     objectType: string
     date: string,
-    createdDate: string
+    modifiedDate: Date,
+    createdDate: Date
 }
 
 

@@ -36,4 +36,6 @@ good feature
 - separate webapi
 - gui
 - figure out what is TOD and learn
+- new features: modified date
+- better refresh
 

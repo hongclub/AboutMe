@@ -22,7 +22,7 @@ export class UserComponent {
 
 
         // get id from url
-        const id = 1;
+        const id = 2;
 
 
         this.http.get(this.baseUrl + 'api/User/' + id).subscribe(result => {
@@ -45,7 +45,7 @@ export class UserComponent {
     */
 
     save(): void {
-
+        this.user.modifiedDate = new Date();
         this.http.put(this.baseUrl + 'api/User', this.user).subscribe(); 
     }
 
@@ -59,6 +59,8 @@ export class UserObject {
     lastName: string;
     emailAddress: string;
     phoneNumber: string;
+    modifiedDate: Date;
+    createdDate: Date;
 }
 
 

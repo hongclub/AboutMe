@@ -50,6 +50,7 @@ namespace AboutMe.Models.DataManager
                 user.LastName = item.LastName;
                 user.EmailAddress = item.EmailAddress; 
                 user.PhoneNumber = item.PhoneNumber;
+                user.ModifiedDate = item.ModifiedDate;
 
                 userID = ctx.SaveChanges();
             }
