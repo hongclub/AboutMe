@@ -11,11 +11,21 @@ export class JobEditComponent {
     public job: Job;
     public user: string;
 
-    
+    // for overall rating drop down
+    ratings: any = [
+        { id: 1, name: '1' },
+        { id: 2, name: '2' },
+        { id: 3, name: '3' },
+        { id: 4, name: '4' },
+        { id: 5, name: '5' }
+    ];
+    selectedRating = 2;
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute, private location: Location) {
+
         // get id from url
         const id = this.route.snapshot.paramMap.get('id');
+       
 
         if (id == null) {
             this.job = new Job();
@@ -58,6 +68,12 @@ export class JobEditComponent {
         }
     }
 
+
+    changeRatingDropdown(id: number): void {
+        //const NAME = this.list.find((item: any) => item.id === +id).name;
+        this.job.rating = id.toString();
+        console.log('debug rating:' + this.job.rating);
+    }
 }
 
 

@@ -16,15 +16,15 @@ questions during development
 ? not sure how to use HttpClient from common/http
 ? not sure  how to http.post and voide the CORS
 ? the EF tutorial i follow
-
 ? git revert
 ? need to implement all interface method
 ? EF migration with existing table
-
 ? basic Angular tutorial
-? Created Date object type
-? all field needed to be update
-? delete feature
+
+x Created Date object type
+x all field needed to be update
+x delete feature
+- current: objectType, drop down, tutorial, date, images
 
 
 good feature
@@ -38,4 +38,5 @@ good feature
 - figure out what is TOD and learn
 - new features: modified date
 - better refresh
+- add Calendar date
 
