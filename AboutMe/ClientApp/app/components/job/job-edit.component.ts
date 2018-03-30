@@ -19,7 +19,17 @@ export class JobEditComponent {
         { id: 4, name: '4' },
         { id: 5, name: '5' }
     ];
-    selectedRating = 2;
+    public selectedRating: number;
+
+    // for company rating drop down
+    comapnyRatings: any = [
+        { id: 1, name: '1' },
+        { id: 2, name: '2' },
+        { id: 3, name: '3' },
+        { id: 4, name: '4' },
+        { id: 5, name: '5' }
+    ];
+    public selectedCompanyRating: number;
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute, private location: Location) {
 
@@ -44,10 +54,11 @@ export class JobEditComponent {
         else {
         this.http.get(this.baseUrl + 'api/Job/' + id).subscribe(result => {
             this.job = result.json() as Job;
+            this.selectedRating = parseInt(this.job.rating);
+            this.selectedCompanyRating = parseInt(this.job.companyRating);
             }, error => console.error(error));
         }
     }
-
 
     goBack(): void {
         this.location.back();
@@ -68,11 +79,14 @@ export class JobEditComponent {
         }
     }
 
-
     changeRatingDropdown(id: number): void {
-        //const NAME = this.list.find((item: any) => item.id === +id).name;
         this.job.rating = id.toString();
-        console.log('debug rating:' + this.job.rating);
+        this.selectedRating = id;
+    }
+
+    changeCompanyRatingDropdown(ids: number): void {
+        this.job.companyRating = ids.toString();
+        this.selectedCompanyRating = ids;
     }
 }
 

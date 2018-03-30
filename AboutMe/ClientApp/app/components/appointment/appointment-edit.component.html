@@ -23,7 +23,9 @@
                 <div class="form-group">
                     <label>
                         <span class="text-muted">ObjectType</span>
-                        <input class="form-control" [(ngModel)]="appointment.objectType" placeholder="name" />
+                        <select class="form-control" #select [(ngModel)]="selectedObjectType" (change)="changeObjectTypeDropdown(select.value)">
+                            <option *ngFor="let ot of objectTypes" [value]="ot.id">{{ot.name}}</option>
+                        </select>
                     </label>
                 </div>
                 <div class="form-group">

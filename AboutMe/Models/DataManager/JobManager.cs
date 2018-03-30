@@ -56,6 +56,7 @@ namespace AboutMe.Models.DataManager
                 job.Title = item.Title;
                 job.Comment = item.Comment;
                 job.Rating = item.Rating;
+                job.CompanyRating = item.CompanyRating;
                 job.Category = item.Category;
                 job.ModifiedDate = item.ModifiedDate;
 

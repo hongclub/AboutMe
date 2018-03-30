@@ -11,6 +11,12 @@ export class AppointmentEditComponent {
     public appointment: Appointment;
     public user: string;
 
+    // for company rating drop down
+    objectTypes: any = [
+        { id: '0', name: 'Select' },
+        { id: 'Job', name: 'Job' }
+    ];
+    public selectedObjectType: string;
     
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute, private location: Location) {
@@ -58,17 +64,20 @@ export class AppointmentEditComponent {
         }
     }
 
-}
+    changeObjectTypeDropdown(id: string): void {
+        this.appointment.objectType = id.toString();
+    }
 
+}
 
 
 export class Appointment {
     id: Number;
     title: string;
-    descrption: string;
+    description: string;
     objectId: Number;
     objectType: string;
-    date: string;
+    date: Date;
     modifiedDate: Date;
     createdDate: Date
 }
