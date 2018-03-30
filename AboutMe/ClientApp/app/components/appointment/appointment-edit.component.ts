@@ -40,6 +40,7 @@ export class AppointmentEditComponent {
         else {
         this.http.get(this.baseUrl + 'api/Appointment/' + id).subscribe(result => {
             this.appointment = result.json() as Appointment;
+            this.selectedObjectType = this.appointment.objectType;
             }, error => console.error(error));
         }
     }
@@ -51,6 +52,7 @@ export class AppointmentEditComponent {
 
     save(): void {
 
+        console.log(this.appointment);
         let currentDate = new Date();
         if (this.appointment.id == null)
         {
@@ -66,6 +68,7 @@ export class AppointmentEditComponent {
 
     changeObjectTypeDropdown(id: string): void {
         this.appointment.objectType = id.toString();
+        console.log(id);
     }
 
 }

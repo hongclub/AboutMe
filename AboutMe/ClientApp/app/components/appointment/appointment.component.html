@@ -4,43 +4,46 @@
 
 <button (click)="true;" [routerLink]="['/appointment-edit']" class="btn btn-primary">Add Appointment</button>
 
-<table class='table' *ngIf="appointments">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Descrption</th>
-            <th>ObjectId</th>
-            <th>ObjectType</th>
-            <th>Modified Date</th>
-            <th>Created Date</th>
-            <th>Date</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let appointment of appointments">
-            <td>{{ appointment.id }}</td>
-            <td>{{ appointment.title }}</td>
-            <td>{{ appointment.description }}</td>
-            <td>{{ appointment.objectId }}</td>
-            <td>{{ appointment.objectType }}</td>
-            <td>{{ appointment.modifiedDate }}</td>
-            <td>{{ appointment.createdDate }}</td>
-            <td>{{ appointment.date }}</td>
-            <td>
-                <a [routerLink]="['/appointment-edit', appointment.id]">
-                    <span class='glyphicon glyphicon-pencil'></span> 
-                </a>
-            </td>
-            <td>
-                <a (click)="delete(appointment.id)">
-                    <span class='glyphicon glyphicon-trash'></span>
-                </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div *ngIf="appointments; else noAppointment">
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Descrption</th>
+                <th>ObjectId</th>
+                <th>ObjectType</th>
+                <th>Modified Date</th>
+                <th>Created Date</th>
+                <th>Date</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appointment of appointments">
+                <td>{{ appointment.id }}</td>
+                <td>{{ appointment.title }}</td>
+                <td>{{ appointment.description }}</td>
+                <td>{{ appointment.objectId }}</td>
+                <td>{{ appointment.objectType }}</td>
+                <td>{{ appointment.modifiedDate }}</td>
+                <td>{{ appointment.createdDate }}</td>
+                <td>{{ appointment.date }}</td>
+                <td>
+                    <a [routerLink]="['/appointment-edit', appointment.id]">
+                        <span class='glyphicon glyphicon-pencil'></span>
+                    </a>
+                </td>
+                <td>
+                    <a (click)="delete(appointment.id)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #noAppointment><div>Currently there is no appointment.</div></ng-template>
 
 
