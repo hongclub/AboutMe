@@ -19,12 +19,12 @@ questions during development
 ? git revert
 ? need to implement all interface method
 ? EF migration with existing table
-? basic Angular tutorial
+~ basic Angular tutorial
 
 x Created Date object type
 x all field needed to be update
 x delete feature
-- current: objectType, drop down, tutorial, date, images
+- current: objectType, x drop down, tutorial, date, images
 
 
 good feature
@@ -36,9 +36,9 @@ good feature
 - separate webapi
 - gui
 - figure out what is TOD and learn
-- new features: modified date
+x new features: modified date
 - better refresh
 - add Calendar date
-- add if else statement
+x add if else statement
 - profile image
 

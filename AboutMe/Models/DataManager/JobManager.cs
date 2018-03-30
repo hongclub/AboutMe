@@ -58,7 +58,7 @@ namespace AboutMe.Models.DataManager
                 job.Rating = item.Rating;
                 job.CompanyRating = item.CompanyRating;
                 job.Category = item.Category;
-                job.ModifiedDate = item.ModifiedDate;
+                job.ModifiedDate = DateTime.Now;
 
                 jobID = ctx.SaveChanges();
             }
