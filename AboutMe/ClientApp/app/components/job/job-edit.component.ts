@@ -13,23 +13,25 @@ export class JobEditComponent {
 
     // for overall rating drop down
     ratings: any = [
+        { id: 0, name: '-- Please Select --' },
         { id: 1, name: '1' },
         { id: 2, name: '2' },
         { id: 3, name: '3' },
         { id: 4, name: '4' },
         { id: 5, name: '5' }
     ];
-    public selectedRating: number;
+    selectedRating = 0;
 
     // for company rating drop down
     comapnyRatings: any = [
+        { id: 0, name: '-- Please Select --'},
         { id: 1, name: '1' },
         { id: 2, name: '2' },
         { id: 3, name: '3' },
         { id: 4, name: '4' },
         { id: 5, name: '5' }
     ];
-    public selectedCompanyRating: number;
+    selectedCompanyRating = 0;
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute, private location: Location) {
 

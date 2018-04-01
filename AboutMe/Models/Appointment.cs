@@ -17,7 +17,11 @@ namespace AboutMe.Models
 
         public string ObjectType { get; set; }
 
-        public DateTime Date { get; set; }
+        public string Type { get; set; }
+
+        public DateTime fromDate { get; set; }
+
+        public DateTime toDate { get; set; }
 
         public DateTime ModifiedDate { get; set; }
 

@@ -29,8 +29,8 @@
             <td>{{ job.rating }}</td>
             <td>{{ job.companyRating }}</td>
             <td>{{ job.category }}</td>
-            <td>{{ job.modifiedDate }}</td>
-            <td>{{ job.createdDate }}</td>
+            <td>{{ job.modifiedDate | date: 'M/d/yy h:mm a' }}</td>
+            <td>{{ job.createdDate | date: 'M/d/yy h:mm a'  }}</td>
             <td>
                 <a [routerLink]="['/job-edit', job.id]">
                     <span class='glyphicon glyphicon-pencil'></span> 

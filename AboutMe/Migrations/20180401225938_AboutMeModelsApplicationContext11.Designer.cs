@@ -11,9 +11,10 @@ using System;
 namespace AboutMe.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20180401225938_AboutMeModelsApplicationContext11")]
+    partial class AboutMeModelsApplicationContext11
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,8 +37,6 @@ namespace AboutMe.Migrations
                     b.Property<string>("ObjectType");
 
                     b.Property<string>("Title");
-
-                    b.Property<string>("Type");
 
                     b.Property<DateTime>("fromDate");
 

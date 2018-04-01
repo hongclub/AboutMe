@@ -24,7 +24,7 @@ questions during development
 x Created Date object type
 x all field needed to be update
 x delete feature
-- current: objectType, x drop down, tutorial, date, images
+- current: objectType, x drop down, tutorial, date, images, date picker
 
 
 good feature

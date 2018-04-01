@@ -28,8 +28,10 @@ interface Appointment {
     title: string,
     descrption: string,
     objectId: Number,
-    objectType: string
-    date: string,
+    objectType: string,
+    type: string,
+    fromDate: Date,
+    toDate: Date,
     modifiedDate: Date,
     createdDate: Date
 }

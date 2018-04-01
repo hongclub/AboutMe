@@ -13,10 +13,17 @@ export class AppointmentEditComponent {
 
     // for company rating drop down
     objectTypes: any = [
-        { id: '0', name: 'Select' },
+        { id: '0', name: '-- Please Select --' },
         { id: 'Job', name: 'Job' }
     ];
-    public selectedObjectType: string;
+    selectedObjectType = '0';
+
+    types: any = [
+        { id: '0', name: '-- Please Select -- ' },
+        { id: 'Phone Interview', name: 'Phone Interview' },
+         { id: 'OnSite Interview', name: 'OnSite Interview' }
+    ];
+    selectedType = '0';
     
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string, private route: ActivatedRoute, private location: Location) {
@@ -41,6 +48,7 @@ export class AppointmentEditComponent {
         this.http.get(this.baseUrl + 'api/Appointment/' + id).subscribe(result => {
             this.appointment = result.json() as Appointment;
             this.selectedObjectType = this.appointment.objectType;
+            this.selectedType = this.appointment.type;
             }, error => console.error(error));
         }
     }
@@ -71,6 +79,11 @@ export class AppointmentEditComponent {
         console.log(id);
     }
 
+    changeTypeDropdown(id: string): void {
+        this.appointment.type = id.toString();
+        console.log(id);
+    }
+
 }
 
 
@@ -80,7 +93,9 @@ export class Appointment {
     description: string;
     objectId: Number;
     objectType: string;
-    date: Date;
+    type: string;
+    fromDate: Date;
+    toDate: Date;
     modifiedDate: Date;
     createdDate: Date
 }
