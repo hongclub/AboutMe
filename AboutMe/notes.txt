@@ -9,36 +9,35 @@ questions during development
 ? how to pull data actually
 ? the class just attached to each code too much (interface and export classes)
 ? routing
-? where is the best place to stored all model classes (like hero, job, user)
-? how can you not create entity everywhere, so ignoring
 ? not sure how to upgrade from 4.2.5 to 4.3 
 ? not sure how to check version
 ? not sure how to use HttpClient from common/http
-? not sure  how to http.post and voide the CORS
+? not sure  how to http.post and avoid the CORS
 ? the EF tutorial i follow
 ? git revert
-? need to implement all interface method
-? EF migration with existing table
+? ** need to implement all interface method
+? ** classes - how can you not create entity everywhere, so annoying, where is the best place to stored all model classes (like hero, job, user)
+~ ? EF migration with existing table
 ~ basic Angular tutorial
 
 x Created Date object type
 x all field needed to be update
 x delete feature
-- current: objectType, x drop down, tutorial, date, images, date picker
-
+- current: x objectType, x drop down, x date, tutorial, images, date picker
 
 good feature
 ------------
-- upload pics and more images
-- calendar
+- ** upload pics and more images, profile image
+- ** calendar
+- ** maybe edit on the same page instead of jumping around
+- add datepicker
 - events
-- maybe edit on the same page instead of jumping around
 - separate webapi
 - gui
 - figure out what is TOD and learn
-x new features: modified date
 - better refresh
-- add Calendar date
+x new features: modified date
 x add if else statement
-- profile image
+
+
 
