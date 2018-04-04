@@ -91,6 +91,7 @@ export class Appointment {
     id: Number;
     title: string;
     description: string;
+    objectName: string;
     objectId: Number;
     objectType: string;
     type: string;

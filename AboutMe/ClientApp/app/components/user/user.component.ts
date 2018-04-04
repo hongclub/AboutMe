@@ -7,7 +7,7 @@ import { Http } from '@angular/http';
 })
 export class UserComponent {
     public user: UserObject;
-    public profileDefaultUrl = require("./assets/profile-default.png");
+    public profileDefaultUrl = "./assets/profile-default.png";
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {
 

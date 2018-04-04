@@ -23,6 +23,7 @@ namespace AboutMe.Models.DataManager
         public IEnumerable<Appointment> GetAll()
         {
             var appointments = ctx.Appointments.ToList();
+
             return appointments;
         }
 
