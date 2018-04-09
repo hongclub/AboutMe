@@ -52,6 +52,15 @@ namespace AboutMe.Controllers
         {
             return _iRepo.Delete(id);
         }
+
+
+        /*
+        [HttpGet("{id}")]
+        public object GetJobOption()
+        {
+            return _iRepo.Get(id);
+        }
+        */
     }
 
 
