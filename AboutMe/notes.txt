@@ -16,14 +16,14 @@ questions during development
 ? the EF tutorial i follow
 ? git revert
 ? ** need to implement all interface method
-? ** classes - how can you not create entity everywhere, so annoying, where is the best place to stored all model classes (like hero, job, user)
+x ** classes - how can you not create entity everywhere, so annoying, where is the best place to stored all model classes (like hero, job, user)
 ~ ? EF migration with existing table
 ~ basic Angular tutorial
 
 x Created Date object type
 x all field needed to be update
 x delete feature
-- current: x objectType, x drop down, x date, tutorial, images, date picker
+- current: x objectType, x drop down, x date, tutorial, images, date picker, EF
 
 good feature
 ------------
