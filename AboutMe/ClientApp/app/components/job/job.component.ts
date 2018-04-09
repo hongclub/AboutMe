@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 import { Location } from '@angular/common';
+import { Job } from './job';
 
 @Component({
     selector: 'job',
@@ -23,18 +24,6 @@ export class JobComponent {
     reload(): void {
         window.location.reload(true);       // TODO: need to use Angular instead 
     }
-}
-
-interface Job {
-    id: Number,
-    title: string,
-    descrption: string,
-    comment: string,
-    rating: string,
-    companyRating: string,
-    category: string,
-    modifiedDate: Date
-    createdDate: Date
 }
 
 

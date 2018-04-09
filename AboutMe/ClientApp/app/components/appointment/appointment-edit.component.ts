@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { Http } from '@angular/http';
 import { Location } from '@angular/common';
+import { Appointment } from './appointment';
 
 @Component({
     selector: 'appointment-edit',
@@ -32,17 +33,6 @@ export class AppointmentEditComponent {
 
         if (id == null) {
             this.appointment = new Appointment();
-            //    (0, 'test', 'test', 'test', 'test', 'test', 'test', 'test');
-            //{
-            //    id = 0,
-            //    title = 'test';
-            //    comment = comment;
-            //    rate = rate;
-            //    companyRate = companyRate;
-            //    category = category;
-            //    createdDate = createdDate;
-            //};
-
         }
         else {
         this.http.get(this.baseUrl + 'api/Appointment/' + id).subscribe(result => {
@@ -84,21 +74,6 @@ export class AppointmentEditComponent {
         console.log(id);
     }
 
-}
-
-
-export class Appointment {
-    id: Number;
-    title: string;
-    description: string;
-    objectName: string;
-    objectId: Number;
-    objectType: string;
-    type: string;
-    fromDate: Date;
-    toDate: Date;
-    modifiedDate: Date;
-    createdDate: Date
 }
 
 

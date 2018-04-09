@@ -1,7 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { Http } from '@angular/http';
-import { Location } from '@angular/common';
+import { Location } from '@angular/common'; 
+import { Job } from './job';
 
 @Component({
     selector: 'whatever',
@@ -93,38 +94,6 @@ export class JobEditComponent {
 }
 
 
-
-export class  Job {
-    id: Number;
-    title: string;
-    description: string;
-    comment: string;
-    rating: string;
-    companyRating: string;
-    category: string;
-    modifiedDate: Date
-    createdDate: Date;
-   
-
-    //constructor(id: number,
-    //    title: string,
-    //    descrption: string,
-    //    comment: string,
-    //    rate: string,
-    //    companyRate: string,
-    //    category: string,
-    //    createdDate: string
-    //    ) {
-    //    this.id = id;
-    //    this.title = title;
-    //    this.comment = comment;
-    //    this.rate = rate;
-    //    this.companyRate = companyRate;
-    //    this.category = category;
-    //    this.createdDate = createdDate;
-
-    // }
-}
 
 
 

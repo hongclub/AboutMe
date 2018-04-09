@@ -1,12 +1,13 @@
 import { Component, Inject} from '@angular/core';
 import { Http } from '@angular/http';
+import { User } from './user';
 
 @Component({
     selector: 'user',
     templateUrl: './user.component.html'
 })
 export class UserComponent {
-    public user: UserObject;
+    public user: User;
     public profileDefaultUrl = "./assets/profile-default.png";
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {
@@ -27,7 +28,7 @@ export class UserComponent {
 
 
         this.http.get(this.baseUrl + 'api/User/' + id).subscribe(result => {
-            this.user = result.json() as UserObject;
+            this.user = result.json() as User;
         }, error => console.error(error));
         
     }
@@ -52,16 +53,5 @@ export class UserComponent {
 
 }
 
-
-export class UserObject {
-    id: number; 
-    userName: string;
-    firstName: string;
-    lastName: string;
-    emailAddress: string;
-    phoneNumber: string;
-    modifiedDate: Date;
-    createdDate: Date;
-}
 
 

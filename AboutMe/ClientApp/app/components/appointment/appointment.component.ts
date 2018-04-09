@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { Appointment } from './appointment';
 
 @Component({
     selector: 'appointment',
@@ -21,20 +22,6 @@ export class AppointmentComponent {
     reload(): void {
         window.location.reload(true);       // TODO: need to use Angular instead 
     }
-}
-
-interface Appointment {
-    id: Number,
-    title: string,
-    descrption: string,
-    objectName: string,
-    objectId: Number,
-    objectType: string,
-    type: string,
-    fromDate: Date,
-    toDate: Date,
-    modifiedDate: Date,
-    createdDate: Date
 }
 
 
