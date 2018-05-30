@@ -4,7 +4,7 @@
 
 <button (click)="true;" [routerLink]="['/job-edit']" class="btn btn-primary">Add Job</button>
 
-<table class='table' *ngIf="jobs">
+<table class='table' *ngIf="jobs" style="font-size: smaller;">
     <thead>
         <tr>
             <th>Id</th>
@@ -14,8 +14,8 @@
             <th>Rating</th>
             <th>Company Rate</th>
             <th>Category</th>
-            <th>Modified Date</th>
-            <th>Created Date</th>
+            <!-- <th>Modified Date</th>
+    <th>Created Date</th>-->
             <th></th>
             <th></th>
         </tr>
@@ -29,16 +29,16 @@
             <td>{{ job.rating }}</td>
             <td>{{ job.companyRating }}</td>
             <td>{{ job.category }}</td>
-            <td>{{ job.modifiedDate | date: 'M/d/yy h:mm a' }}</td>
-            <td>{{ job.createdDate | date: 'M/d/yy h:mm a'  }}</td>
+            <!-- <td>{{ job.modifiedDate | date: 'M/d/yy h:mm a' }}</td>
+    <td>{{ job.createdDate | date: 'M/d/yy h:mm a'  }}</td>-->
             <td>
                 <a [routerLink]="['/job-edit', job.id]">
-                    <span class='glyphicon glyphicon-pencil'></span> 
+                    <span class='glyphicon glyphicon-pencil'></span>
                 </a>
             </td>
             <td>
                 <a (click)="delete(job.id)">
-                    <span class='glyphicon glyphicon-trash'></span> 
+                    <span class='glyphicon glyphicon-trash'></span>
                 </a>
             </td>
         </tr>

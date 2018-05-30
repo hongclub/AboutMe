@@ -4,7 +4,7 @@
 
 <button (click)="true;" [routerLink]="['/appointment-edit']" class="btn btn-primary">Add Appointment</button>
 
-<div *ngIf="appointments; else noAppointment">
+<div *ngIf="appointments; else noAppointment" style="font-size: smaller;">
     <table class='table'>
         <thead>
             <tr>
@@ -16,14 +16,16 @@
                 <th>Type</th>
                 <th>From</th>
                 <th>To</th>
-                <th>Modified Date</th>
-                <th>Created Date</th>
+                <!--
+     <th>Modified Date</th>
+     <th>Created Date</th>
+     -->
                 <th></th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let appointment of appointments">
+            <tr *ngFor="let appointment of appointments | orderBy:'objectId'">
                 <td>{{ appointment.id }}</td>
                 <td>{{ appointment.title }}</td>
                 <td>{{ appointment.description }}</td>
@@ -32,8 +34,10 @@
                 <td>{{ appointment.type }}</td>
                 <td>{{ appointment.fromDate | date: 'M/d/yy h:mm a'  }}</td>
                 <td>{{ appointment.toDate | date: 'M/d/yy h:mm a'  }}</td>
-                <td>{{ appointment.modifiedDate | date: 'M/d/yy h:mm a' }}</td>
-                <td>{{ appointment.createdDate | date: 'M/d/yy h:mm a' }}</td>
+                <!--
+    <td>{{ appointment.modifiedDate | date: 'M/d/yy h:mm a' }}</td>
+    <td>{{ appointment.createdDate | date: 'M/d/yy h:mm a' }}</td>
+        -->
                 <td>
                     <a [routerLink]="['/appointment-edit', appointment.id]">
                         <span class='glyphicon glyphicon-pencil'></span>
