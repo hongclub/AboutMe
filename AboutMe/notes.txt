@@ -38,6 +38,6 @@ good feature
 - better refresh
 x new features: modified date
 x add if else statement
-
+- add sorting
 
 
