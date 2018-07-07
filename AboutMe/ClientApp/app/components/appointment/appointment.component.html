@@ -25,7 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let appointment of appointments | orderBy:'objectId'">
+            <tr *ngFor="let appointment of appointments">
                 <td>{{ appointment.id }}</td>
                 <td>{{ appointment.title }}</td>
                 <td>{{ appointment.description }}</td>
